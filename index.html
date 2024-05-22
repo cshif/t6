@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/dbe9394b7e.js" crossorigin="anonymous"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <title>t6</title>
+</head>
+
+<body>
+    <!-- header >992px 才作用 -->
+    <header class="custom_container header">
+        <h1 class="logo_box_desktop">
+            <a href="##">
+                <img src="./images/logo.png" alt="logo" class="logo">
+            </a>
+        </h1>
+        <div class="contact_desktop">
+            <div class="contact_desktop_icon_box">
+                <a href="##" class="icon_facebook"></a>
+                <a href="##" class="icon_twitter"></a>
+                <a href="##" class="icon_filicker"></a>
+                <a href="##" class="icon_dribble"></a>
+                <a href="##" class="icon_rss"></a>
+            </div>
+            <div class="call_us">Call Us Now:
+                <a href="tel:+1(777)784-25-43" class="call_us_number">+1 ( 777) 784-25-43</a>
+            </div>
+        </div>
+    </header>
+    <!-- navbar <992px 是漢堡 / >992px 展開 -->
+    <nav class="navbar navbar-expand-lg custom_container">
+        <!-- navbar_mobile >992px 不作用 -->
+        <div class="navbar_mobile">
+            <h1 class="logo_box">
+                <a href="##">
+                    <img src="./images/logo.png" alt="logo" class="logo">
+                </a>
+            </h1>
+            <div class="navbar_icon_box">
+                <!-- 點選：展開導覽選單 -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- 點選：會展開 search bar -->
+                <a class="search_bar_img_box" role="button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSearchBar" aria-expanded="true" aria-controls="collapseSearchBar">
+                    <img src="./images/search.png" alt="search">
+                </a>
+            </div>
+        </div>
+        <!-- search bar -->
+        <form id="collapseSearchBar" class="collapse search_bar_box">
+            <input type="search" placeholder="Search the Site..." class="search_bar_input" id="search_bar_input">
+            <button type="submit" class="search_bar_submit_button"></button>
+        </form>
+        <!-- 導覽選單 -->
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT</a>
+                </li>
+                <!-- dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        FEATURES
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">FEATURES 1</a></li>
+                        <li><a class="dropdown-item" href="#">FEATURES 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        PORTFOLIO
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">PORTFOLIO 1</a></li>
+                        <li><a class="dropdown-item" href="#">PORTFOLIO 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        BLOG
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">BLOG 1</a></li>
+                        <li><a class="dropdown-item" href="#">BLOG 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">CONTACTS</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <main class="custom_container main">
+        <!-- banner -->
+        <section id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/banner1.jpg" alt="banner1" class="carousel-img">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/banner2.jpg" alt="banner2" class="carousel-img">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/banner3.jpg" alt="banner3" class="carousel-img">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            </button>
+        </section>
+        <!-- service -->
+        <section class="service">
+            <div class="service_item">
+                <h4 class="service_item_title">GOWTH STRATEGIES</h4>
+                <div>
+                    <img src="./images/p1.png" alt="GROWTH STRATEGIES">
+                </div>
+                <p class="service_item_info">Vestibulm dignissm, dui achendrerit blandit, sapien orcidutum nibh, vel
+                    suscipit augue nibh in enim. Nullam dignissm euismodnunc at</p>
+                <a href="##" class="service_item_link">More</a>
+            </div>
+            <div class="service_item">
+                <h4 class="service_item_title">PERFECT SUPPORT</h4>
+                <div>
+                    <img src="./images/p2.png" alt="GROWTH STRATEGIES">
+                </div>
+                <p class="service_item_info">Vestibulm dignissm, dui achendrerit blandit, sapien orcidutum nibh, vel
+                    consequat leo neque in ante. Curabitur fringilla tristique nisl ut</p>
+                <a href="##" class="service_item_link">More</a>
+            </div>
+            <div class="service_item">
+                <h4 class="service_item_title">PARTNERS PROGRAMS</h4>
+                <div>
+                    <img src="./images/p3.png" alt="GROWTH STRATEGIES">
+                </div>
+                <p class="service_item_info">Vestibulm dignissm, dui achendrerit blandit, sapien orcidutum nibh, vel
+                    magna, vel scelerisque lectus pharetra quis. Cras</p>
+                <a href="##" class="service_item_link">More</a>
+            </div>
+            <div class="service_item">
+                <h4 class="service_item_title">PREMIUM SERVICES</h4>
+                <div>
+                    <img src="./images/p4.png" alt="GROWTH STRATEGIES">
+                </div>
+                <p class="service_item_info">Vestibulm dignissm, dui achendrerit blandit, sapien orcidutum nibh, vel
+                    blandit viverra sodales. Donec sit amet diam neque</p>
+                <a href="##" class="service_item_link">More</a>
+            </div>
+        </section>
+        <!-- overview -->
+        <section class="overview">
+            <!-- welcome -->
+            <div>
+                <h2 class="welcome_title">WELCOME</h2>
+                <div class="welcome_body">
+                    <div class="welcome_body_img_box">
+                        <img src="./images/welcome.jpg" alt="welcome">
+                    </div>
+                    <div>
+                        <p class="welcome_body_info">Curabitur velit nisl, porttitor viverra molesite quis, Iacinia eget
+                            purus. Suspendisse ipsum massa, rutrum in hendrerit malesuada, fermentum id erat eget
+                            hendrerit. Vestibulum vulputate dui et pulvinar suscipit.</p>
+                        <a href="##"><b>More</b></a>
+                    </div>
+                </div>
+            </div>
+            <!-- why choose us -->
+            <div>
+                <h2 class="why_choose_us_title">WHY CHOOSE US?</h2>
+                <div class="why_choose_us_item">
+                    <i class="fa-solid fa-chevron-right why_choose_us_item_icon"></i>
+                    <p class="why_choose_us_item_info">Etiam ruturm venenatis dui, non</p>
+                </div>
+                <div class="why_choose_us_item">
+                    <i class="fa-solid fa-chevron-right why_choose_us_item_icon"></i>
+                    <p class="why_choose_us_item_info">Aliquam ac diam in lorem vulputate auctor.</p>
+                </div>
+                <div class="why_choose_us_item">
+                    <i class="fa-solid fa-chevron-right why_choose_us_item_icon"></i>
+                    <p class="why_choose_us_item_info">Vestibulum vitae urna quis eros convallis</p>
+                </div>
+                <div class="why_choose_us_item">
+                    <i class="fa-solid fa-chevron-right why_choose_us_item_icon"></i>
+                    <p class="why_choose_us_item_info">Sed magna magna, congue</p>
+                </div>
+            </div>
+            <!-- news events -->
+            <div class="news_events">
+                <h2 class="news_events_title">NEWS & EVENTS</h2>
+                <div class="news_events_body">
+                    <div class="news_events_card">
+                        <div class="news_events_card_img_box">
+                            <img src="./images/news1.jpg" alt="news1">
+                        </div>
+                        <div class="news_events_card_info">
+                            <time datetime="12-12-12" class="news_events_card_info_title">12-12-12</time>
+                            <p class="news_events_card_info_text">Aliquam ac diam in lorem vulputate auctor. Aliquam
+                                rhoncus
+                                nunc et justo imperdiet blandit leo id, tempus eros. Vivamus viverra laoreet erat eget
+                                hendrerit.</p>
+                            <a href="##"><b>More</b></a>
+                        </div>
+                    </div>
+                    <div class="news_events_card">
+                        <div class="news_events_card_img_box">
+                            <img src="./images/news2.jpg" alt="news2">
+                        </div>
+                        <div class="news_events_card_info">
+                            <time datetime="12-12-12" class="news_events_card_info_title">12-12-12</time>
+                            <p class="news_events_card_info_text">Aliquam ac diam in lorem vulputate auctor. Aliquam
+                                rhoncus
+                                nunc et justo imperdiet blandit leo id, tempus eros. Vivamus viverra laoreet erat eget
+                                hendrerit.</p>
+                            <a href="##"><b>More</b></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="separator">
+        <!-- feature works -->
+        <section class="featured_works">
+            <div class="swiper">
+                <div class="featured_works_head">
+                    <h2 class="">FEATURED WORKS</h2>
+                    <!-- navigation -->
+                    <div class="featured_works_head_navigation">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+                <!-- Slider main  -->
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide featured_works_item">
+                        <img src="./images/g1.jpg" alt="feature works1" class="featured_works_item_img">
+                        <div class="featured_works_item_decorate_square">
+                            <div class="featured_works_item_info">
+                                <p class="featured_works_item_info_title">ECENAS ENIM</p>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon1.png" alt="search">
+                                </a>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon2.png" alt="link">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide featured_works_item">
+                        <img src="./images/g2.jpg" alt="feature works2" class="featured_works_item_img">
+                        <div class="featured_works_item_decorate_square">
+                            <div class="featured_works_item_info">
+                                <p class="featured_works_item_info_title">ECENAS ENIM</p>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon1.png" alt="search">
+                                </a>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon2.png" alt="link">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide featured_works_item">
+                        <img src="./images/g3.jpg" alt="feature works3" class="featured_works_item_img">
+                        <div class="featured_works_item_decorate_square">
+                            <div class="featured_works_item_info">
+                                <p class="featured_works_item_info_title">ECENAS ENIM</p>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon1.png" alt="search">
+                                </a>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon2.png" alt="link">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide featured_works_item">
+                        <img src="./images/g4.jpg" alt="feature works4" class="featured_works_item_img">
+                        <div class="featured_works_item_decorate_square">
+                            <div class="featured_works_item_info">
+                                <p class="featured_works_item_info_title">ECENAS ENIM</p>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon1.png" alt="search">
+                                </a>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon2.png" alt="link">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide featured_works_item">
+                        <img src="./images/g1.jpg" alt="feature works1" class="featured_works_item_img">
+                        <div class="featured_works_item_decorate_square">
+                            <div class="featured_works_item_info">
+                                <p class="featured_works_item_info_title">ECENAS ENIM</p>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon1.png" alt="search">
+                                </a>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon2.png" alt="link">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide featured_works_item">
+                        <img src="./images/g2.jpg" alt="feature works2" class="featured_works_item_img">
+                        <div class="featured_works_item_decorate_square">
+                            <div class="featured_works_item_info">
+                                <p class="featured_works_item_info_title">ECENAS ENIM</p>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon1.png" alt="search">
+                                </a>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon2.png" alt="link">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide featured_works_item">
+                        <img src="./images/g3.jpg" alt="feature works3" class="featured_works_item_img">
+                        <div class="featured_works_item_decorate_square">
+                            <div class="featured_works_item_info">
+                                <p class="featured_works_item_info_title">ECENAS ENIM</p>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon1.png" alt="search">
+                                </a>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon2.png" alt="link">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide featured_works_item">
+                        <img src="./images/g4.jpg" alt="feature works4" class="featured_works_item_img">
+                        <div class="featured_works_item_decorate_square">
+                            <div class="featured_works_item_info">
+                                <p class="featured_works_item_info_title">ECENAS ENIM</p>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon1.png" alt="search">
+                                </a>
+                                <a href="##" class="featured_works_item_info_link">
+                                    <img src="./images/icon2.png" alt="link">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="custom_container footer">
+        <div>
+            <div class="footer_list">
+                <div class="footer_list_item">
+                    <h3 class="footer_list_item_title">LATEST TWEETS</h3>
+                    <p>loading tweets...</p>
+                </div>
+                <div class="footer_list_item">
+                    <h3 class="footer_list_item_title">TESTIMONIALS</h3>
+                    <div class="testimonials">
+                        <div class="testimonials_inner">
+                            <p class="testimonials_dialog_box">
+                                "Sed dapibus molestie interdum. Fusce nec est ante, sit amet lacinia lorem. Maecenas nex
+                                eros ut
+                                mauris pulvinar suscipit. Aliquam erat
+                            </p>
+                        </div>
+                        <div class="testimonials_providers">
+                            <div class="testimonials_providers_img_box">
+                                <img src="./images/men.jpg" alt="testimonials">
+                            </div>
+                            <div class="testimonials_providers_details">
+                                <p>Stephen Bingham</p>
+                                <a href="##" class="testimonials_providers_details_link">demolink.org</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_list_item">
+                    <h3 class="footer_list_item_title">GET IN TOUCH!</h3>
+                    <form class="get_in_touch">
+                        <div class="get_in_touch_inputs">
+                            <input type="text" name="get_in_touch_inputs_name" placeholder="Name"
+                                class="get_in_touch_inputs_name" required>
+                            <input type="email" name="get_in_touch_inputs_email" placeholder="Email"
+                                class="get_in_touch_inputs_email" required>
+                            <textarea type="text" name="get_in_touch_inputs_message" placeholder="Message" rows="4"
+                                class="get_in_touch_inputs_message" required></textarea>
+                        </div>
+                        <div class="get_in_touch_buttons">
+                            <button type="reset" class="get_in_touch_buttons_reset">CLEAR FORM</button>
+                            <button type="submit" class="get_in_touch_buttons_submit">SEND!</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="footer_list_item">
+                    <h3 class="footer_list_item_title">FLICKR</h3>
+                    <div class="flickr">
+                        <a href="##" class="flickr_img_box">
+                            <img src="./images/f1.jpg" alt="flicker">
+                        </a>
+                        <a href="##" class="flickr_img_box">
+                            <img src="./images/f2.jpg" alt="flicker">
+                        </a>
+                        <a href="##" class="flickr_img_box">
+                            <img src="./images/f3.jpg" alt="flicker">
+                        </a>
+                        <a href="##" class="flickr_img_box">
+                            <img src="./images/f4.jpg" alt="flicker">
+                        </a>
+                        <a href="##" class="flickr_img_box">
+                            <img src="./images/f5.jpg" alt="flicker">
+                        </a>
+                        <a href="##" class="flickr_img_box">
+                            <img src="./images/f6.jpg" alt="flicker">
+                        </a>
+                        <a href="##" class="flickr_img_box">
+                            <img src="./images/f7.jpg" alt="flicker">
+                        </a>
+                        <a href="##" class="flickr_img_box">
+                            <img src="./images/f8.jpg" alt="flicker">
+                        </a>
+                        <a href="##" class="flickr_img_box">
+                            <img src="./images/f9.jpg" alt="flicker">
+                        </a>
+                        <a href="##" class="flickr_img_box">
+                            <img src="./images/f10.jpg" alt="flicker">
+                        </a>
+                        <a href="##" class="flickr_img_box">
+                            <img src="./images/f11.jpg" alt="flicker">
+                        </a>
+                        <a href="##" class="flickr_img_box">
+                            <img src="./images/f12.jpg" alt="flicker">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bar">
+                <div class="contact_mobile">
+                    <div class="contact_mobile_icon_box">
+                        <a href="##" class="icon_facebook"></a>
+                        <a href="##" class="icon_twitter"></a>
+                        <a href="##" class="icon_filicker"></a>
+                        <a href="##" class="icon_dribble"></a>
+                        <a href="##" class="icon_rss"></a>
+                    </div>
+                    <div class="call_us">Call Us Now:
+                        <a href="tel:+1(777)784-25-43" class="call_us_number">+1 ( 777) 784-25-43</a>
+                    </div>
+                </div>
+                <p class="footer_bar_copyright">BUSINESS PLANET © 2020 |
+                    <a href="##" class="footer_bar_copyright_policy_link">Privacy Policy</a>
+                </p>
+                <div class="footer_bar_nav">
+                    <a href="##" class="footer_bar_nav_item">HOME</a>
+                    <a href="##" class="footer_bar_nav_item">ABOUT</a>
+                    <a href="##" class="footer_bar_nav_item">FEATURES</a>
+                    <a href="##" class="footer_bar_nav_item">PORTFOLIO</a>
+                    <a href="##" class="footer_bar_nav_item">BLOG</a>
+                    <a href="##" class="footer_bar_nav_item">CONTACTS</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+</body>
+
+</html>

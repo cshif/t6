@@ -1,0 +1,110 @@
+@use "../utilities/background" as *;
+@use "../utilities/breakpoints" as *;
+
+@mixin layout {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+
+  [class^="icon"] {
+    display: inline-block;
+    width: 28.5px;
+    height: 27.5px;
+    background-image: $social;
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: 0;
+  }
+}
+
+$icon--spacing-x: -37.1px;
+$icon--spacing-y: -27px;
+
+@mixin sprite {
+  .icon_facebook {
+    background-position-x: 0;
+
+    &:hover {
+      background-position-y: $icon--spacing-y;
+    }
+  }
+
+  .icon_twitter {
+    background-position-x: $icon--spacing-x;
+
+    &:hover {
+      background-position-y: $icon--spacing-y;
+    }
+  }
+
+  .icon_filicker {
+    background-position-x: $icon--spacing-x * 2;
+
+    &:hover {
+      background-position-y: $icon--spacing-y;
+    }
+  }
+
+  .icon_dribble {
+    background-position-x: $icon--spacing-x * 3;
+
+    &:hover {
+      background-position-y: $icon--spacing-y;
+    }
+  }
+
+  .icon_rss {
+    background-position-x: $icon--spacing-x * 4;
+
+    &:hover {
+      background-position-y: $icon--spacing-y;
+    }
+  }
+}
+
+@mixin sprite_hover_opacity {
+  .icon_facebook {
+    background-position-x: 0;
+    background-position-y: $icon--spacing-y;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .icon_twitter {
+    background-position-x: $icon--spacing-x;
+    background-position-y: $icon--spacing-y;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .icon_filicker {
+    background-position-x: $icon--spacing-x * 2;
+    background-position-y: $icon--spacing-y;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .icon_dribble {
+    background-position-x: $icon--spacing-x * 3;
+    background-position-y: $icon--spacing-y;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .icon_rss {
+    background-position-x: $icon--spacing-x * 4;
+    background-position-y: $icon--spacing-y;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

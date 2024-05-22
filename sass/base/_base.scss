@@ -1,0 +1,31 @@
+@use "../utilities/color" as *;
+@use "../utilities/background" as *;
+@use "../utilities/breakpoints" as *;
+
+html {
+  min-width: 360px;
+}
+
+body {
+  background: $grey-wood;
+  background-repeat: repeat;
+  box-shadow: inset 0 100px $black, inset 0 -295.5px $black;
+  padding: 10px 20px 0 20px;
+}
+
+a {
+  display: inline-block;
+  color: $black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.custom_container {
+  max-width: 1140px;
+  margin: 0 auto;
+}

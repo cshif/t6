@@ -1,0 +1,180 @@
+@use "../utilities/background" as *;
+@use "../utilities/color" as *;
+@use "../utilities/breakpoints" as *;
+@use "../componet/input";
+@use "../componet/social-media";
+
+
+.navbar {
+    --bs-navbar-padding-y: 0;
+    background-image: $white-lines;
+    background-repeat: repeat;
+  
+    @include deviceSize($desktop) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-top: 30px;
+      background: linear-gradient(transparent 50%, $grey-200 50%);
+    }
+  }
+  
+  .navbar_mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    box-shadow: 0.5px 0.5px 4px $black;
+  
+    @include deviceSize($desktop) {
+      display: none;
+    }
+  }
+  
+  .logo_box {
+    // 這樣寫因為：不想讓 navbar 展開的時候 padding 包在外面
+    padding: 16px 0;
+  }
+  
+  .navbar_icon_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 5px;
+  
+    .navbar-toggler {
+      padding: 4.8px;
+  
+      .navbar-toggler-icon {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  
+  .search_bar_img_box {
+    padding: 4.8px;
+  
+    @include deviceSize($desktop) {
+      display: none;
+    }
+  
+    img {
+      width: 25px;
+    }
+  }
+  
+  .search_bar_box {
+    padding: 10px;
+    background-color: white;
+    color: $grey-400;
+    width: 100%;
+  
+    @include deviceSize($desktop) {
+      background: $white;
+      flex-basis: 24%;
+      box-shadow: -0.5px -0.5px 6px $black;
+    }
+  }
+  
+  // search bar 用 collapse 做的
+  // 預設為：點選 icon 才會出現，但 >992px 時點選的 icon 不作用，所以要設置 not show 的時候出現
+  .search_bar_box:not(.show) {
+    @include deviceSize($desktop) {
+      display: block;
+    }
+  }
+  
+  .search_bar_input {
+    @include input.initial-style;
+  
+    @include deviceSize($desktop) {
+      padding-right: 35px;
+    }
+  }
+  
+  .search_bar_submit_button {
+    display: none;
+  
+    @include deviceSize($desktop) {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: $search;
+      position: absolute;
+      top: 21px;
+      right: 20px;
+      border: 0;
+    }
+  }
+  
+  .navbar .navbar-collapse {
+    @include deviceSize($desktop) {
+      flex-grow: 0;
+      flex-basis: 75%;
+      background-color: $white;
+      box-shadow: 0.5px -0.5px 4px $black;
+    }
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+    padding: 16px;
+  
+    @include deviceSize($tablet) {
+      padding: 20px 16px;
+    }
+  
+    background-color: initial;
+    color: initial;
+  
+    &:hover {
+      background-color: $secondary-green;
+      color: $white;
+    }
+  
+    &.active {
+      background-color: $theme-green;
+      color: $white;
+    }
+  }
+  
+  .nav-item+.nav-item {
+    border-right: 0.8px solid $grey-100;
+  }
+  
+  .dropdown-menu {
+    --bs-dropdown-padding-y: 0;
+    border: 0;
+    border-radius: 0;
+  }
+  
+  .dropdown-item {
+    padding: 12.8px;
+  
+    background-color: initial;
+    color: initial;
+  
+    &:hover {
+      background-color: $secondary-green;
+      color: $white;
+    }
+  
+    &:active {
+      opacity: 0.8;
+    }
+  }
+  
+  // dropdown-toggle 的下拉點擊 icon
+  .dropdown-toggle::after {
+    width: 6px;
+    height: 6px;
+    border-top: 0;
+    border-right: 0.8px solid black;
+    border-bottom: 0.8px solid black;
+    border-left: 0;
+    transform: rotate(45deg);
+  }

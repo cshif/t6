@@ -1,0 +1,125 @@
+@use "../utilities/breakpoints" as *;
+@use "../utilities/color" as *;
+@use "../utilities/responsive-layouts" as *;
+
+
+.featured_works {
+    @include responsive-padding;
+  }
+  
+  .featured_works_head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  
+    .custom_h2 {
+      margin-bottom: 0;
+    }
+  
+    &_navigation {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 25px;
+  
+      @include deviceSize($desktop) {
+        gap: 10px;
+      }
+    }
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: inline-block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    margin: 0;
+  
+    &::after {
+      font-size: 20px;
+      color: $grey-400;
+  
+      @include deviceSize($desktop) {
+        font-size: 15px;
+      }
+    }
+  }
+  
+  .featured_works_item {
+    position: relative;
+    overflow: hidden;
+  
+    &_img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 50%;
+      height: 80%;
+      background-color: $grey-500;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(45deg) translate(-156%, -16%);
+      transition-duration: 0.3s;
+      transition-delay: 0.1s;
+    }
+  
+    &_decorate_square {
+      width: 300%;
+      height: 75%;
+      background-color: $grey-500;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: rotate(-45deg) translate(-29%, -35%);
+      transition-duration: 0.3s;
+      transition-delay: 0.1s;
+      border-right: 2px solid $theme-green;
+    }
+  
+    &_info {
+      position: absolute;
+      color: $white;
+      text-align: center;
+  
+      &_title {
+        &:after {
+          content: "";
+          display: block;
+          width: 150px;
+          height: 2px;
+          margin: 10px;
+          background-color: $white;
+        }
+  
+        &_link {
+          display: flex;
+          flex-direction: row;
+          column-gap: 10px;
+        }
+      }
+    }
+  
+    &:hover {
+      &::before {
+        transform: rotate(45deg) translate(-81%, -16%);
+      }
+  
+      .featured_works_item_decorate_square {
+        transform: rotate(-45deg) translate(-29%, -195%);
+      }
+    }
+  }

@@ -1,0 +1,54 @@
+@use "../utilities/breakpoints" as *;
+
+$padding_y: 30px;
+$padding_x: 10px;
+$padding_x_tablet: 25px;
+$padding_x_desktop: 30px;
+
+@mixin responsive-padding {
+  padding: $padding_y $padding_x;
+
+  @include deviceSize($tablet) {
+    padding: $padding_y $padding_x_tablet;
+  }
+
+  @include deviceSize($desktop) {
+    padding: $padding_y $padding_x_desktop;
+  }
+}
+
+@mixin responsive-flex-row($column-gap, $row-gap) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: $column-gap $row-gap;
+  @include responsive-padding;
+
+  &_item {
+    flex-basis: 100%;
+
+    @include deviceSize($tablet) {
+      flex-basis: calc((100% - $column-gap * 1) / 2);
+    }
+
+    @include deviceSize($desktop) {
+      flex-basis: calc((100% - $column-gap * 3) / 4);
+    }
+  }
+}
+
+@mixin responsive-grid($column-gap, $row-gap) {
+  display: grid;
+  gap: $column-gap $row-gap;
+
+  @include responsive-padding;
+  grid-template-columns: 1fr;
+
+  @include deviceSize($tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include deviceSize($desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

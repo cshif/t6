@@ -1,0 +1,8 @@
+$tablet : 576px;
+$desktop : 992px;
+
+@mixin deviceSize($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

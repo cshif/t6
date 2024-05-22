@@ -1,0 +1,8 @@
+@use "../utilities/color" as *;
+
+@mixin initial-style {
+  display: inline-block;
+  padding: 5px 8px;
+  color: $white;
+  font-weight: 500;
+}
